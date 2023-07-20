@@ -23,7 +23,7 @@ if __name__ == '__main__':
         # Extract the JSON data from the response
         data = response.json()
 
-        # Get the name of the user from the first task 
+        # Get the name of the user from the first task
         # (assuming all tasks belong to the same user)
         name = data[0]['user']['name']
 
@@ -39,7 +39,7 @@ if __name__ == '__main__':
 
         # Display progress information
         print(f"{first_str} ({n_task_ok}/{total_task}):")
-        
+
         # Display the titles of completed tasks
         for task in tasks_ok:
             print(f"\t {task['title']}")

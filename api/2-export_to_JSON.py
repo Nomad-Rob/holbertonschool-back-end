@@ -12,7 +12,7 @@ if __name__ == '__main__':
     # API URL for the JSONPlaceholder service
     url = 'https://jsonplaceholder.typicode.com'
 
-    # Make a GET request to fetch the user's TODO list with 
+    # Make a GET request to fetch the user's TODO list with
     # user information expanded
     response = requests.get(
         f'{url}/users/{user_id}/todos',
@@ -24,7 +24,7 @@ if __name__ == '__main__':
         # Extract the JSON data from the response
         data = response.json()
 
-        # Create a dictionary to store the tasks for the user 
+        # Create a dictionary to store the tasks for the user
         # with their user ID as the key
         user_tasks = {user_id: []}
 

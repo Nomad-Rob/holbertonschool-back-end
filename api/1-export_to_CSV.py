@@ -7,7 +7,7 @@ import requests
 from sys import argv
 
 if __name__ == '__main__':
-    # Make GET requests to the JSON Placeholder API 
+    # Make GET requests to the JSON Placeholder API
     # to fetch users and Todos data
     resp_users = requests.get('https://jsonplaceholder.typicode.com/users')
     resp_todos = requests.get('https://jsonplaceholder.typicode.com/todos/')

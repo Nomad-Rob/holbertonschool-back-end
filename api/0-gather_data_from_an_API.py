@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """returns information about his/her TODO list progress."""
+
+
 import requests
 from sys import argv
 
@@ -10,7 +12,7 @@ if __name__ == '__main__':
     # Get the user ID from the command-line argument
     user_id = argv[1]
 
-    # Make a GET request to fetch the user's TODO list with user information expanded
+    # Make a GET request to fetch the user's TODO list with user information
     response = requests.get(
         f'{url}/users/{user_id}/todos',
         params={'_expand': 'user'}
@@ -21,7 +23,8 @@ if __name__ == '__main__':
         # Extract the JSON data from the response
         data = response.json()
 
-        # Get the name of the user from the first task (assuming all tasks belong to the same user)
+        # Get the name of the user from the first task 
+        # (assuming all tasks belong to the same user)
         name = data[0]['user']['name']
 
         # Filter tasks that are completed (completed = True)
